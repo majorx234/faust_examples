@@ -3,3 +3,4 @@
 
 # Examples
 ## 1.Stormy White Noise
+## 2.Synth with Envelope
