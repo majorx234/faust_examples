@@ -9,4 +9,4 @@ wind(f) = whitenoise : moog_vcf_2bn(f, freq)
 
 force = hslider("force[accx: 1 0 0 0][owl: parameter_a]", 0, -0.98, 0.98, 0.01) : abs;
 
-process = force : wind;
+process = force : wind <: (_,_);
