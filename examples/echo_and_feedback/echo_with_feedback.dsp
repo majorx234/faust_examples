@@ -1,8 +1,9 @@
 import("stdfaust.lib");
 
-echo = A~B
+echo_damp = hslider("echo damp", 0.5, 0, 1.0, 0.01);
+echo(f) = A~B
 with {
   A = +;
-  B = _ @ 48000 * 0.3;
+  B = _ @ 48000 * f;
 };
-process = echo;
+process = echo(echo_damp);
