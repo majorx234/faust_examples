@@ -1,8 +1,8 @@
 import("stdfaust.lib");
 
-freq = hslider("freq", 440, 50, 2000, 0.1);
-gain = hslider("gain", 0.5, 0 ,1, 0.01);
-pan = hslider("pan",0.5 , 0 , 1, 0.01);
+freq = hslider("freq", 440, 50, 2000, 0.1) : si.smoo;
+gain = hslider("gain", 0.5, 0 ,1, 0.01) : si.smoo;
+pan = hslider("pan",0.5 , 0 , 1, 0.01) : si.smoo;
 gate = button("gate");
 
 envelope = en.asr(0.1, 1, 1, gate);
